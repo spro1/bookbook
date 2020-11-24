@@ -1,4 +1,5 @@
 node_modules/
 .idea/
 common/
-routes/auth.js
+venv/
+db.sqlite3
