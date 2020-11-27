@@ -20,6 +20,26 @@ date : 20201124
 8. 독서록 편집(마이 페이지) -> 기존 독서록 내용 편집
 
 ---
+## URL 라우팅 정보
+```
+APP : main
+    /                       --> 메인페이지
+    /info                   --> 소개페이지
+
+APP : user
+    /<user-id>              --> 권한有 - 마이페이지, 권한無 - 타 유저 정보 페이지
+
+APP : Post
+    /post/<post-id>         --> 독서록 Read 페이지
+    /post/add               --> 독서록 등록 페이지
+    /post/update/<post-id>  --> 독서록 편집 페이지
+
+APP : Search
+    /search?key=value       --> 검색 결과 창 페이지
+
+```
+
+---
 ## 개발 마감
 ~11/30 1차 목표   
 ~12/5 마지노선
