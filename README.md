@@ -27,12 +27,16 @@ APP : main
     /info                   --> 소개페이지
 
 APP : user
+    /login                  --> 로그인 페이지
+    /signup                 --> SNS 로그인 후 콜백 (개인정보 추가 기입 후 회원가입완료)
+    /logout                 --> 로그아웃
     /<user-id>              --> 권한有 - 마이페이지, 권한無 - 타 유저 정보 페이지
 
 APP : Post
     /post/<post-id>         --> 독서록 Read 페이지
     /post/add               --> 독서록 등록 페이지
     /post/update/<post-id>  --> 독서록 편집 페이지
+    /post/delete/<post-id>  --> 독서록 삭제 페이지
 
 APP : Search
     /search?key=value       --> 검색 결과 창 페이지
