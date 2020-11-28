@@ -21,9 +21,8 @@ def main_page(request):
 def search_page(request):
     q = request.GET.get('q', '')
     if q:
-        data = q
         # 알라딘 검색
-        url = "http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=%s&Query=%s&Start=1&MaxResults=10&output=xml"%(ttbkey, q)
+        url = "http://www.aladin.co.kr/ttb/api/ItemSearch.aspx?ttbkey=%s&Query=%s&Start=1&MaxResults=20&output=xml"%(ttbkey, q)
         print(url)
         req = requests.get(url)
         data = xmltodict.parse(req.text)
@@ -35,4 +34,4 @@ def search_page(request):
 
     # mysql 조회
     # 글목록 조회
-    return render(request, 'main/search_page.html', {'page': 'search_page', 'data': data})
+    return render(request, 'main/search_page.html', {'page': 'search_page', 'data': data, 'query' : q})

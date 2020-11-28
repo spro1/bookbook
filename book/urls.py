@@ -20,4 +20,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('post/', include('post.urls')),
+
+    # social login
+    path('accounts/', include('allauth.urls')),
+    path('user/', include('user.urls')),
 ]

@@ -12,6 +12,7 @@
             <input type="submit" value="검색">
         </form>
     </div>
+    <p>검색어는 {{ query }} 입니다.</p>
     {% for value in data.object.item %}
             <ul>
                 <img src={{ value.cover }} />
@@ -20,7 +21,7 @@
                 <li>출판사 : {{ value.publisher }}</li>
                 <li>책소개 : {{ value.description }}</li>
                 <li>가격 : {{ value.priceStandard }}</li>
-                <li>풀간일 : {{ value.pubDate }}</li>
+                <li>출간일 : {{ value.pubDate }}</li>
             </ul>
         {% endfor %}
 </body>
