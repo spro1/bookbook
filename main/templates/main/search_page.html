@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    hello world this is {{ page }} html
+    <div>
+        <form action="/search" method="get">
+            <input type="text" name="q" value="{{ q }}">
+            <input type="submit" value="검색">
+        </form>
+    </div>
+    {% for value in data.object.item %}
+            <ul>
+                <img src={{ value.cover }} />
+                <li>제목 : {{ value.title }}</li>
+                <li>저자 : {{ value.author }}</li>
+                <li>출판사 : {{ value.publisher }}</li>
+                <li>책소개 : {{ value.description }}</li>
+                <li>가격 : {{ value.priceStandard }}</li>
+                <li>풀간일 : {{ value.pubDate }}</li>
+            </ul>
+        {% endfor %}
+</body>
+</html>

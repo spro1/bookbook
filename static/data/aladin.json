@@ -4,7 +4,7 @@
     "logo": "http://image.aladin.co.kr/img/header/2011/aladin_logo_new.gif",
     "title": "알라딘 베스트셀러 리스트 - 국내도서",
     "link": "https://www.aladin.co.kr/shop/common/wbest.aspx?BestType=Bestseller&amp;BranchType=1&amp;Year=2020&amp;Month=11&amp;Week=4&amp;partner=openAPI",
-    "pubDate": "Sat, 28 Nov 2020 09:55:00 GMT",
+    "pubDate": "Sat, 28 Nov 2020 16:43:14 GMT",
     "totalResults": 1000,
     "startIndex": 1,
     "itemsPerPage": 10,
@@ -291,7 +291,7 @@
     "logo": "http://image.aladin.co.kr/img/header/2011/aladin_logo_new.gif",
     "title": "알라딘 전체 신간 리스트 - 국내도서",
     "link": "https://www.aladin.co.kr/shop/common/wnew.aspx?NewType=New&amp;BranchType=1&amp;partner=openAPI",
-    "pubDate": "Sat, 28 Nov 2020 09:55:00 GMT",
+    "pubDate": "Sat, 28 Nov 2020 16:43:14 GMT",
     "totalResults": 1000,
     "startIndex": 1,
     "itemsPerPage": 10,
@@ -571,8 +571,8 @@
     "logo": "http://image.aladin.co.kr/img/header/2011/aladin_logo_new.gif",
     "title": "알라딘 주목할 만한 신간 리스트 - 국내도서",
     "link": "https://www.aladin.co.kr/shop/common/wnew.aspx?NewType=SpecialNew&amp;BranchType=1&amp;partner=openAPI",
-    "pubDate": "Sat, 28 Nov 2020 09:55:01 GMT",
-    "totalResults": 2169,
+    "pubDate": "Sat, 28 Nov 2020 16:43:15 GMT",
+    "totalResults": 2158,
     "startIndex": 1,
     "itemsPerPage": 10,
     "query": "QueryType=ITEMNEWSPECIAL;SearchTarget=book",
@@ -836,5 +836,5 @@
       }
     ]
   },
-  "update": "2020-11-28 18:55:01.167955"
+  "update": "2020-11-29 01:43:15.677135"
 }

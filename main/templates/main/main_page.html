@@ -6,5 +6,50 @@
 </head>
 <body>
     hello world this is {{ page }} html
+    <div>
+        <form action="/search" method="get">
+            <input type="text" name="q" value="{{ q }}">
+            <input type="submit" value="검색">
+        </form>
+    </div>
+    <div>
+        {% for value in aladin.best_seller.item %}
+            <ul>
+                <img src={{ value.cover }} />
+                <li>제목 : {{ value.title }}</li>
+                <li>저자 : {{ value.author }}</li>
+                <li>출판사 : {{ value.publisher }}</li>
+                <li>책소개 : {{ value.description }}</li>
+                <li>가격 : {{ value.priceStandard }}</li>
+                <li>출간일 : {{ value.pubDate }}</li>
+            </ul>
+        {% endfor %}
+    </div>
+    <div>
+        {% for value in aladin.new_book.item %}
+            <ul>
+                <img src={{ value.cover }} />
+                <li>제목 : {{ value.title }}</li>
+                <li>저자 : {{ value.author }}</li>
+                <li>출판사 : {{ value.publisher }}</li>
+                <li>책소개 : {{ value.description }}</li>
+                <li>가격 : {{ value.priceStandard }}</li>
+                <li>출간일 : {{ value.pubDate }}</li>
+            </ul>
+        {% endfor %}
+    </div>
+    <div>
+        {% for value in aladin.recommand_book.item %}
+            <ul>
+                <img src={{ value.cover }} />
+                <li>제목 : {{ value.title }}</li>
+                <li>저자 : {{ value.author }}</li>
+                <li>출판사 : {{ value.publisher }}</li>
+                <li>책소개 : {{ value.description }}</li>
+                <li>가격 : {{ value.priceStandard }}</li>
+                <li>출간일 : {{ value.pubDate }}</li>
+            </ul>
+        {% endfor %}
+    </div>
 </body>
 </html>
