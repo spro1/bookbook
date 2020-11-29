@@ -12,9 +12,6 @@
 
     <a href="/accounts/signup">회원가입</a>
     <br>
-    {% if user.is_authenticated %}
-        {{ user.username }}
-    {% else %}
-    <a href="{%  provider_login_url 'naver'  %}">naver 로그인</a>
+
 </body>
 </html>

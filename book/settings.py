@@ -25,7 +25,7 @@ SECRET_KEY = 'ea(ox5wtlj8-2rg^k-z(r@e_$(u^1-(!+xk@+wbcs-%w6qa$1+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '118.46.217.124']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '118.46.217.124', 'bboookk.com']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'django.contrib.sites',
     'allauth',
+    'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.naver',
 ]
@@ -137,3 +138,4 @@ AUTHENTICATION_BACKENDS = (
 )
 SITE_ID = 1
 LOGIN_REDIRECT_URL = '/'
+ACCOUNT_LOGOUT_ON_GET = True
