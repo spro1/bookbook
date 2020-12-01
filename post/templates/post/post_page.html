@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-    hello world this is {{ page }} html
-</body>
-</html>
+{% extends "base.html" %}
+{%  block content %}
+    <button>책검색</button>
+    <p>hello world this is {{ page }} html</p>
+
+{% endblock content %}

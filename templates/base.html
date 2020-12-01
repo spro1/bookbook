@@ -1,0 +1,33 @@
+{% load static %}
+{% load socialaccount %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>쀾</title>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="{%  static 'css/common.css' %}">
+</head>
+<body>
+    <!-- 유저 로그인 정보 -->
+    {%  if user.is_authenticated %}
+        {% get_social_accounts user as accounts %}
+        <p>Welcome {{ user.username }} {{ user.email }} {{ user.id }}</p>
+    {{ accounts.naver.0 }}
+    {{ accounts.naver.0.uid }}
+    {{ accounts.naver.0.extra_data }}
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock %}
+    <footer class="footer">
+        <p>Copyright © 2020 . All rights reserved.</p>
+    </footer>
+</body>
+</html>
