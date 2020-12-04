@@ -18,43 +18,60 @@
             <input type="submit" value="검색">
         </form>
     </div>
-    <div>
-        {% for value in aladin.best_seller.item %}
-            <ul>
-                <img src={{ value.cover }} />
-                <li>제목 : {{ value.title }}</li>
-                <li>저자 : {{ value.author }}</li>
-                <li>출판사 : {{ value.publisher }}</li>
-                <li>책소개 : {{ value.description }}</li>
-                <li>가격 : {{ value.priceStandard }}</li>
-                <li>출간일 : {{ value.pubDate }}</li>
-            </ul>
-        {% endfor %}
-    </div>
-    <div>
-        {% for value in aladin.new_book.item %}
-            <ul>
-                <img src={{ value.cover }} />
-                <li>제목 : {{ value.title }}</li>
-                <li>저자 : {{ value.author }}</li>
-                <li>출판사 : {{ value.publisher }}</li>
-                <li>책소개 : {{ value.description }}</li>
-                <li>가격 : {{ value.priceStandard }}</li>
-                <li>출간일 : {{ value.pubDate }}</li>
-            </ul>
-        {% endfor %}
-    </div>
-    <div>
-        {% for value in aladin.recommand_book.item %}
-            <ul>
-                <img src={{ value.cover }} />
-                <li>제목 : {{ value.title }}</li>
-                <li>저자 : {{ value.author }}</li>
-                <li>출판사 : {{ value.publisher }}</li>
-                <li>책소개 : {{ value.description }}</li>
-                <li>가격 : {{ value.priceStandard }}</li>
-                <li>출간일 : {{ value.pubDate }}</li>
-            </ul>
-        {% endfor %}
-    </div>
+    <dlv class="container">
+    <p>탭 만들어서 display on off</p>
+        <div class="row">
+            <div class="swiper-container">
+            <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    {% for value in aladin.best_seller.item %}
+                        <div class="swiper-slide">
+                            <img src={{ value.cover }} />
+                        </div>
+                    {% endfor %}
+                    <!-- Slides -->
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="swiper-container">
+            <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    {% for value in aladin.new_book.item %}
+                        <div class="swiper-slide">
+                            <img src={{ value.cover }} />
+                        </div>
+                    {% endfor %}
+                    <!-- Slides -->
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="swiper-container">
+            <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    {% for value in aladin.recommand_book.item %}
+                        <div class="swiper-slide">
+                            <img src={{ value.cover }} />
+                        </div>
+                    {% endfor %}
+                    <!-- Slides -->
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </dlv>
+
 {% endblock content %}
